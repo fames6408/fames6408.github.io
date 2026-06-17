@@ -5,30 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACAL Automotive Group | Coming Soon</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f4f9; color: #333; text-align: center; }
-        .container { max-width: 600px; padding: 20px; width: 100%; }
+        /* Changed height to min-height so the page can grow if needed */
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            background-color: #f4f4f9; 
+            color: #333; 
+            text-align: center; 
+        }
+
+        /* Added padding to ensure content doesn't hit the screen edges in landscape */
+        .container { 
+            max-width: 600px; 
+            padding: 40px 20px; 
+            width: 100%; 
+        }
         
-        /* Updated Styles for Logo */
         .logo {
-            width: 90%; /* Logo will take up 90% of screen width */
-            max-width: 500px; /* Logo can grow up to 500px */
+            width: 90%; 
+            max-width: 500px; 
             height: auto;
             margin-bottom: 20px;
         }
         
-        h1 { font-size: 2rem; margin-bottom: 10px; }
         p { font-size: 1.1rem; color: #666; margin-bottom: 30px; }
         .contact { font-weight: bold; color: #007bff; text-decoration: none; }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Logo will now appear larger -->
         <img src="logo.png" alt="ACAL Automotive Group Logo" class="logo">
         
-        <h1>ACAL Automotive Group</h1>
         <p>Our website is currently under construction, but our operations are active. We are working hard to bring you the best experience.</p>
-        <p>Inquiries: <a href="mailto:info@acalautomotive.com" class="contact">forrest@acalautomotive.com</a></p>
+        <p>Inquiries: <a href="mailto:info@acalautomotive.com" class="contact">info@acalautomotive.com</a></p>
     </div>
 </body>
 </html>
