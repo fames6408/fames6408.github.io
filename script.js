@@ -153,36 +153,43 @@ function validateForm(data) {
 }
 
 function submitForm(data, form, formMessage, submitBtn) {
-    // Simulate network delay
-    setTimeout(function() {
-        // In a production environment, you would send this to a backend/email service
-        // Example: 
-        // fetch('/api/contact', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(data)
-        // }).then(response => response.json()).then(result => { ... })
-        
-        // Log form data (for debugging)
-        console.log('Form Data to Send:', {
-            name: data.name,
-            email: data.email,
-            phone: data.phone || 'Not provided',
-            subject: data.subject,
-            message: data.message,
-            timestamp: new Date().toISOString()
-        });
-        
-        // Show success message
-        showFormMessage(
-            'Thank you for your message! We will contact you at ' + data.email + ' within 24 hours.',
-            'success',
-            formMessage
-        );
-        
-        // Reset form
-        form.reset();
-        
+    // Send the data to Formspree using AJAX (fetch)
+    fetch(form.action, {
+        method: form.method,
+        body: JSON.stringify(data),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Show success message
+            showFormMessage(
+                'Thank you for your message! We will contact you at ' + data.email + ' within 24 hours.',
+                'success',
+                formMessage
+            );
+            
+            // Reset the form fields
+            form.reset();
+        } else {
+            // Parse Formspree errors if submission fails
+            response.json().then(errorData => {
+                if (errorData && errorData.errors) {
+                    const errorMessages = errorData.errors.map(err => err.message).join(', ');
+                    showFormMessage('Submission failed: ' + errorMessages, 'error', formMessage);
+                } else {
+                    showFormMessage('Oops! There was a problem submitting your form.', 'error', formMessage);
+                }
+            });
+        }
+    })
+    .catch(error => {
+        // Handle network connection errors
+        showFormMessage('Could not connect to the server. Please check your internet connection and try again.', 'error', formMessage);
+    })
+    .finally(() => {
         // Re-enable submit button
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send Message';
@@ -191,9 +198,9 @@ function submitForm(data, form, formMessage, submitBtn) {
         setTimeout(function() {
             formMessage.style.display = 'none';
         }, 5000);
-        
-    }, 800); // 800ms delay to simulate network request
+    });
 }
+
 
 function showFormMessage(message, type, element) {
     if (!element) {
