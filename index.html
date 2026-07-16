@@ -3,45 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACAL Automotive Group | Coming Soon</title>
-    <style>
-        /* Changed height to min-height so the page can grow if needed */
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-            margin: 0; 
-            background-color: #f4f4f9; 
-            color: #333; 
-            text-align: center; 
-        }
-
-        /* Added padding to ensure content doesn't hit the screen edges in landscape */
-        .container { 
-            max-width: 600px; 
-            padding: 40px 20px; 
-            width: 100%; 
-        }
-        
-        .logo {
-            width: 90%; 
-            max-width: 500px; 
-            height: auto;
-            margin-bottom: 20px;
-        }
-        
-        p { font-size: 1.1rem; color: #666; margin-bottom: 30px; }
-        .contact { font-weight: bold; color: #007bff; text-decoration: none; }
-    </style>
+    <meta name="description" content="ACAL Automotive Group Inc offers professional automotive repair, towing, and maintenance services.">
+    <title>ACAL Automotive Group Inc</title>
+    
+    <!-- 1. LINK TO YOUR CSS (Matches services.html) -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <img src="logo.png" alt="ACAL Automotive Group Logo" class="logo">
-        
-        <p>Our website is currently under construction, but our operations are active. We are working hard to bring you the best experience.</p>
-        <p>Inquiries: <a href="mailto:info@acalautomotive.com" class="contact">info@acalautomotive.com</a></p>
-    </div>
+
+    <!-- Navigation (Matches services.html exactly, but with "Home" marked active) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>ACAL Automotive</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="hero-section">
+        <div class="content-container">
+            <h2>Under Construction</h2>
+            <p>We are actively working on building our digital home. In the meantime, our operations are fully active!</p>
+            <p>For inquiries, please reach out to us at <a href="mailto:info@acalautomotive.com">info@acalautomotive.com</a>.</p>
+        </div>
+    </main>
+
+    <!-- Footer Area -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 ACAL Automotive Group Inc. All rights reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <!-- 2. LINK TO YOUR JAVASCRIPT (Placed at the bottom for smooth loading) -->
+    <script src="script.js" defer></script>
 </body>
 </html>
+
+
