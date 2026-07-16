@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ACAL Automotive Group Inc offers professional automotive repair, towing, and maintenance services.">
+    <meta name="description" content="ACAL Automotive Group Inc - Professional ASE certified automotive repair and maintenance services in Clarksville, FL.">
     <title>ACAL Automotive Group Inc</title>
-    
-    <!-- 1. LINK TO YOUR CSS (Matches services.html) -->
+    <!-- Consistent stylesheet link -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Navigation (Matches services.html exactly, but with "Home" marked active) -->
+    <!-- Navigation (Matches your site structure exactly, with Home marked as active) -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
@@ -27,26 +25,115 @@
         </div>
     </nav>
 
-    <!-- Main Content Area -->
-    <main class="hero-section">
-        <div class="content-container">
-            <h2>Under Construction</h2>
-            <p>We are actively working on building our digital home. In the meantime, our operations are fully active!</p>
-            <p>For inquiries, please reach out to us at <a href="mailto:info@acalautomotive.com">info@acalautomotive.com</a>.</p>
-        </div>
+    <!-- Page Header (Utilizes the header style consistent with other pages) -->
+    <section class="page-header">
+        <h1>ACAL Automotive Group Inc</h1>
+        <p>Professional Automotive Repair & Maintenance in Clarksville, FL</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Welcome / Under Construction Section -->
+        <section class="about-section">
+            <h2>Your Trusted Local Automotive Specialists</h2>
+            <p>Welcome to ACAL Automotive Group Inc. While we are actively putting the finishing touches on our digital home, our physical facility in Clarksville, Florida is open and operating at full speed! We are committed to providing our community with high-quality, reliable, and honest vehicle services.</p>
+            <p>We believe in transparent communication, competitive pricing, and getting the job done right the first time. From minor maintenance to advanced troubleshooting, your vehicle is always in expert hands.</p>
+        </section>
+
+        <!-- Services Grid (Uses your custom grid classes from your stylesheet!) -->
+        <section class="about-section">
+            <h2>Our Featured Services</h2>
+            <p>We utilize modern diagnostic tools and proven repair techniques to keep your vehicle performing at its best:</p>
+            
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <h3>⚡ Diagnostics & Repair</h3>
+                    <p>Advanced diagnostic checks, electrical systems troubleshooting, and comprehensive mechanical repairs to resolve any engine performance issues.</p>
+                </div>
+                <div class="reason-card">
+                    <h3>🛑 Brakes & Suspension</h3>
+                    <p>Complete brake service (pads, rotors, calipers) and suspension tuning to guarantee a smooth, safe, and highly responsive ride.</p>
+                </div>
+                <div class="reason-card">
+                    <h3>❄️ Climate Control</h3>
+                    <p>Certified MACS A/C system troubleshooting, repair, and eco-friendly refrigerant recharge to keep your cabin comfortable in any weather.</p>
+                </div>
+                <div class="reason-card">
+                    <h3>⚙️ Preventative Maintenance</h3>
+                    <p>Regular oil changes, vital fluid flushes, belt and hose inspections, and preventative tune-ups to extend your vehicle's lifespan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Info Summary (Combines certs and hours for easy user access) -->
+        <section class="about-section">
+            <h2>Why Choose Us?</h2>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <h3>🏆 Certified Excellence</h3>
+                    <p>Our team holds comprehensive <strong>ASE A1-7 certifications</strong> and environmental-standard <strong>MACS A/C certifications</strong>, ensuring dealership-level expertise at local service rates.</p>
+                </div>
+                <div class="reason-card">
+                    <h3>⏰ Convenient Hours</h3>
+                    <p>
+                        <strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM<br>
+                        <strong>Saturday:</strong> By Appointment Only<br>
+                        <strong>Sunday:</strong> Closed
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section (Matches your page action section perfectly) -->
+        <section class="cta-section">
+            <h2>Ready to Schedule an Appointment?</h2>
+            <p>Call us today at <strong><a href="tel:8506741894" style="color: white;">(850) 674-1894</a></strong> or send us a message online.</p>
+            <a href="contact.html" class="cta-button-primary">Contact Us Now</a>
+        </section>
     </main>
 
-    <!-- Footer Area -->
-    <footer>
-        <div class="footer-container">
+    <!-- Footer (Matches contact.html exactly with the email field) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ACAL Automotive Group Inc</h3>
+                <p>Professional automotive repair and maintenance services with ASE A1-7 and MACS A/C certifications.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>
+                    <strong>Address:</strong><br>
+                    17788 NW Thrasher Ln.<br>
+                    Clarksville, FL 32430
+                </p>
+                <p>
+                    <strong>Phone:</strong><br>
+                    <a href="tel:8506741894">(850) 674-1894</a>
+                </p>
+                <p>
+                    <strong>Email:</strong><br>
+                    <a href="mailto:info@acalautomotive.com">info@acalautomotive.com</a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
             <p>&copy; 2026 ACAL Automotive Group Inc. All rights reserved.</p>
-            <p><a href="privacy.html">Privacy Policy</a></p>
         </div>
     </footer>
 
-    <!-- 2. LINK TO YOUR JAVASCRIPT (Placed at the bottom for smooth loading) -->
-    <script src="script.js" defer></script>
+    <!-- Linked script file for mobile menu handling -->
+    <script src="script.js"></script>
 </body>
 </html>
-
-
